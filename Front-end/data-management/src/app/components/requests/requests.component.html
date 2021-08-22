@@ -7,7 +7,7 @@
           <tr>
             <th>Offer ID</th>
             <th>Validity</th>
-            <th>Data Owner</th>
+            <th>Data Consumer</th>
             <th>Equipment</th>
             <th>Asset</th>
             <th>Processing Level</th>
@@ -28,7 +28,7 @@
           <tr *ngFor="let item of allRequests | paginate:config; let i=index">
             <td>{{item.offer_id}}</td>
             <td>{{item.endDate|date:'yyyy MMM dd'}}</td>
-            <td>{{item.offer_details.dataOwner}}</td>
+            <td>{{item.dataConsumer}}</td>
             <td>{{item.offer_details.equipment||'N/A'}}</td>
             <td>{{item.offer_details.monitoredAsset||'N/A'}}</td>
             <td>{{item.offer_details.processingLevel||'N/A'}}</td>
