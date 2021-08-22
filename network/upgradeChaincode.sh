@@ -10,8 +10,8 @@ export FABRIC_CFG_PATH=${PWD}/channel/config/
 
 CHANNEL_NAME="mychannel"
 CC_RUNTIME_LANGUAGE="golang"
-VERSION="3"
-SEQUENCE="3"
+VERSION="2"
+SEQUENCE="2"
 CC_NAME="datamanagement"
 CC_SRC_PATH=./chaincode/${CC_NAME}
 
