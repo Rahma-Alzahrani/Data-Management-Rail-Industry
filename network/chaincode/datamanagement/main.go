@@ -237,7 +237,7 @@ func (pm *dataManagement) CreateOfferRequest(ctx contractapi.TransactionContextI
 		ID:              escrowID,
 		ProviderDeposit: offer.Deposit,
 		ConsumerDeposit: _offerRequest.CDeposit,
-		ConsumerPayment: 0,
+		ConsumerPayment: offer.Price,
 		Released:        false,
 		OfferRequestID:  _offerRequest.OfferRequestID,
 		OfferID:         _offerRequest.OfferID,
@@ -756,7 +756,7 @@ func (pm *dataManagement) GetCostFromEscrow(ctx contractapi.TransactionContextIn
 
 func (pm *dataManagement) GetTotalCost(ctx contractapi.TransactionContextInterface, dataProvider, dataConsumer, operator string) ([]*Costs, error) {
 
-	queryString := fmt.Sprintf(`{"selector":{"%s":"%s","%s":[{"dataProvider":"%s"},{"dataConsumer":"%s"}]}}`, DOC_TYPE, COST, operator, dataConsumer, dataProvider)
+	queryString := fmt.Sprintf(`{"selector":{"%s":"%s","%s":[{"dataProvider":"%s"},{"dataConsumer":"%s"}]}}`, DOC_TYPE, COST, operator, dataProvider, dataConsumer)
 	logger.Info(queryString)
 	fmt.Println(queryString)
 	resultsIterator, err := ctx.GetStub().GetQueryResult(queryString)
