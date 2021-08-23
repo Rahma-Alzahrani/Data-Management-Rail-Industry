@@ -34,7 +34,7 @@ export class NewHashValuesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.oprSrv.getAllRequests().subscribe(res => {
+    this.oprSrv.getOffers().subscribe(res => {
       this.allRequests = res;
     }, (error: HttpErrorResponse) => {
       this.popSrv.showError(error.statusText);
