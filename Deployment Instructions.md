@@ -16,7 +16,7 @@ The following prerequisites are required for the deployment of the network:
 - Python: Version *2.7.x*
 - Docker Engine: Version *17.06.2-ce* or higher
 - Docker Compose: Version *1.14* or higher
-- Fabric Hyperledger 2.2 Binaries, Samples and Docker Images
+- Fabric Hyperledger 2.3 Binaries, Samples and Docker Images
 - Angular CLI
 - MongoDB
 
